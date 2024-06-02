@@ -435,8 +435,9 @@
   gap: 40px;
 }
 .two-previews .talk-preview {
-  border: 0.15em solid #FF9318;
+  border: 3px solid #FF9318;
   padding: 0.25em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 section .talk-preview figure {

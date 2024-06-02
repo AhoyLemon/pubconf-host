@@ -153,7 +153,7 @@
 
 
 .two-previews { display:grid; gap: 40px;
-  .talk-preview { border: 0.15em solid $orange; padding:0.25em; }
+  .talk-preview { border: 3px solid $orange; padding:0.25em; background-color: rgba(0,0,0,0.5); }
 }
 section {
   .talk-preview {
