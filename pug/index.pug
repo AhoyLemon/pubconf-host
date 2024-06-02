@@ -1,0 +1,24 @@
+include partials/_variables.pug
+
+doctype html
+head
+  include partials/_head.pug
+body  
+  include partials/_mixins.pug
+
+  .reveal
+    .slides
+
+      // Video Screens
+      include sections/_intros.pug
+      
+      // Personal Intro
+      include sections/_hello.pug
+
+      // Just some slides you can try out.
+      include sections/_example-slides.pug
+
+      // Let's finish this.
+      include sections/_thank-you.pug
+  
+    include partials/_javascripts.pug 
