@@ -8,25 +8,9 @@ body
 
   .reveal
     .slides
-      section
-        section(data-background="img/bg/robots-1.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-        section(data-background="img/bg/robots-2.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-          p Get yourself a drink.
-        section(data-background="img/bg/cyberpunk-2.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-          p The show starts at 7:00pm
-          p (unless Lemon gets distracted by something.)
-        section(data-background="img/bg/art-deco-1.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-          p Hey, have you visited SavasLabs.com ? Because our sponsors would like you to do that please.
-        section(data-background="img/bg/blacklight.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-        section(data-background="img/bg/isometric-1.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
-        section(data-background="img/bg/isometric-2.webp" data-auto-animate)
-          img(src="svg/event-logo-2.svg")
+      include sections/_before.pug
+
+      include sections/_previews.pug
 
       section
         section(data-auto-animate)
@@ -54,6 +38,30 @@ body
         section(data-auto-animate)
           figure
             img(src="img/pharrell-crying-1.webp")
+
+      section
+        section(data-background=defaultBG data-auto-animate)
+          img.logo(src=logo)
+          p(data-id="CodeOfConduct")
+            strong Code of Conduct
+        section(data-background="img/trump-orb.jpg" data-background-position="top right" data-auto-animate)
+          h3(data-id="RuleNumber") Rule #1
+          p(data-id="CodeOfConduct")
+            strong Don't be an asshole.
+        section(data-background=defaultBG data-auto-animate)
+          h3(data-id="RuleNumber") Rule #2
+          p 
+            strong What happens at
+          img.logo(src=logo)
+          p(data-id="CodeOfConduct")
+            strong ...stays at PubConf!
+        section(data-background=defaultBG data-auto-animate)
+          h3(data-id="RuleNumber") Please no...
+          p(style="font-size:3dvw;") Photos, videos, quotes, tweets, snaps, or anything else without the 
+          p(data-id="CodeOfConduct" style="font-size:3dvw;")
+            strong speaker's express permission.
+
+
 
     include partials/_javascripts.pug 
     

@@ -1,0 +1,87 @@
+
+mixin introScreen(pic, name, title, talk)
+  if (!talk)
+    - talk = "This talk does not have a title"
+  .talk-preview
+    .inside
+      figure
+        img(src="img/speakers/"+pic)
+      .details
+        .inside-details
+          .name= name
+          .title= title
+          .talk= talk
+
+
+
+section
+  section
+    .two-previews
+      +introScreen(
+        "sarah_young.webp",
+        "Sarah Young",
+        "Mother of Shibes",
+        ""
+      )
+      +introScreen(
+        "ash_2024.webp",
+        "Ash Bzak",
+        "UX Rapscallion",
+        "According to TNG, it's less than 20 years to World War III"
+      )
+  section
+    .two-previews
+      +introScreen(
+        "brandon_minnick.png",
+        "Brandon Minnick",
+        "Reads the F@*%ing Comments",
+        "Humanity Achieves Peak Laziness"
+      )
+      +introScreen(
+        "jenniferwadella.jpg",
+        "Jennifer Wadella",
+        "Angry Feminist Harpy",
+        ""
+      )
+  section
+    .two-previews
+      +introScreen(
+        "eli_holderness.jpg",
+        "Eli Holderness",
+        "Professional Procrastinator",
+        ""
+      )
+      +introScreen(
+        "dan_neciu.webp",
+        "Neciu Dan",
+        "Señor Engineer",
+        ""
+      )
+  section
+    .two-previews
+      +introScreen(
+        "glenn_henriksen.jpg",
+        "Glenn Henriksen",
+        "",
+        "The Future is Reduced For Quick Sale"
+      )
+      +introScreen(
+        "gabby_fist.webp",
+        "Gabby Spurling",
+        'Googling "How To Comedy"',
+        ""
+      )
+  section
+    .two-previews
+      +introScreen(
+        "eldert.jpg",
+        "Eldert Grootenboer",
+        "Herder of Cats",
+        ""
+      )
+      +introScreen(
+        "anonymous.png",
+        "D'arcy Lussier",
+        "",
+        ""
+      )
