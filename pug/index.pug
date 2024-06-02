@@ -8,17 +8,25 @@ body
 
   .reveal
     .slides
-
-      // Video Screens
-      include sections/_intros.pug
-      
-      // Personal Intro
-      include sections/_hello.pug
-
-      // Just some slides you can try out.
-      include sections/_example-slides.pug
-
-      // Let's finish this.
-      include sections/_thank-you.pug
+      section
+        section(data-background="img/bg/robots-1.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+        section(data-background="img/bg/robots-2.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+          p Get yourself a drink.
+        section(data-background="img/bg/cyberpunk-2.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+          p The show starts at 7:00pm
+          p (unless Lemon gets distracted by something.)
+        section(data-background="img/bg/art-deco-1.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+          p Hey, have you visited SavasLabs.com ? Because our sponsors would like you to do that please.
+        section(data-background="img/bg/blacklight.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+        section(data-background="img/bg/isometric-1.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
+        section(data-background="img/bg/isometric-2.webp" data-auto-animate)
+          img(src="svg/event-logo-2.svg")
   
     include partials/_javascripts.pug 
+    
