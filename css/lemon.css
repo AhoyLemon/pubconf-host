@@ -184,6 +184,13 @@
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
 }
+.reveal .grid[columns="5"] {
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+.reveal .grid.tiny-gap {
+  grid-gap: 10px;
+}
 .reveal .grid .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,6 +434,72 @@
 }
 .contact-lemon .icons svg * {
   fill: #FF9318;
+}
+
+.previously-lemon {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.previously-lemon .previous-talk {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  text-align: left;
+  border: 1px solid #FF9318;
+  padding: 10px;
+  position: relative;
+}
+.previously-lemon .previous-talk .location-and-year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.previously-lemon .previous-talk .location-and-year .location {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FF9318;
+  text-transform: uppercase;
+}
+.previously-lemon .previous-talk .location-and-year .year {
+  font-size: 1.5rem;
+}
+.previously-lemon .previous-talk .location-and-year .year:before {
+  content: "(";
+}
+.previously-lemon .previous-talk .location-and-year .year:after {
+  content: ")";
+}
+.previously-lemon .previous-talk .title {
+  font-size: 1.25rem;
+}
+.previously-lemon .previous-talk .prize {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  font-size: 1px;
+  color: transparent;
+}
+.previously-lemon .previous-talk .prize.winner {
+  background: #ffd700;
+}
+.previously-lemon .previous-talk .prize.finalist {
+  background: #c0c0c0;
 }
 
 .two-previews {

@@ -10,34 +10,108 @@ body
     .slides
       include sections/_before.pug
 
-      include sections/_previews.pug
-
       section
+        section(data-background=defaultBG data-auto-animate)
+          h2 Let's get this
+          img.logo(src=logo)
+          h2 started!
+        
+        section
+          h1 Hi!
+          h2 My name is Lemon.
+          p (I'm not Todd.)
+
+        section
+
+          mixin previously(location, year, title, prize)
+            .previous-talk(class=prize)
+              .location-and-year
+                span.location= location
+                span.year= year
+              .title= title
+              if (prize === "winner")
+                .prize.winner winner
+              if (prize === "finalist")
+                .prize.finalist finalist
+
+          p I've done this a couple times before...
+          .fragment
+            .previously-lemon(columns="3")
+              +previously("London", 2024, "ChatGPT is a Conspiracy of the Illuminati")
+              +previously("Minneapolis", 2022, "Bullshit Champion Round", "winner")
+              +previously("Kansas City", 2022, "Burning Production")
+              +previously("London", 2020, "Website Needs Code, Badly!")
+              +previously("Amsterdam", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding")
+              +previously("Kansas City", 2019, "Oops! I Made A Simpsons Porno?!", "finalist")
+              +previously("Minnesota", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding", "winner")
+              +previously("Sydney", 2018, "Please Your VP By Hating Your User", "finalist")
+              +previously("Kansas City", 2018, "Please Your VP By Hating Your User", "winner")
+              +previously("Minnesota", 2018, "Please Your VP By Hating Your User", "winner")
+              +previously("Minnesota", 2017, "I Got Popular (Ooops)", "finalist")
+          
+        section
+          p Now I'm the host.
+          .fragment
+            p And these are the speakers...
+
+            .grid.tiny-gap(columns="5")
+              +speakerPic("Sarah Young")
+              +speakerPic("Ash Bzak")
+              +speakerPic("Brandon Minnick")
+              +speakerPic("Jennifer Wadella")
+              +speakerPic("Eli Holderness")
+              +speakerPic("Neciu Dan")
+              +speakerPic("Glenn Henriksen")
+              +speakerPic("Gabby Spurling")
+              +speakerPic("Eldert Grootenboer")
+              +speakerPic("D'arcy Lussier")
+        
         section(data-auto-animate)
-          code The year will be...
-          br
-          code(data-id="TheYear" style="font-size:25dvw") 2034
+          p(data-id="Have" style="text-shadow:1px 1px 1px black, -1px -1px 1px black;") #[strong They will have...]
+          ul
+            li 5 minutes
+            li 20 slides
+            li 15 seconds per slide
+            .fragment
+              li(data-id="PANIC") eyes filled with panic
+              li a heart filled with regret
+              
+        section(data-auto-animate data-background-video="video/856227-hd_1920_960_24fps.mp4" data-background-video-loop)
+
         section(data-auto-animate)
-          code The year is...
-          br
-          code(data-id="TheYear" style="font-size:16dvw") 2024
+          p(data-id="Have") #[strong You will have...] 
+          ul
+            li drinks provided by KCDC
+            li swag provided by Savas Labs
+            li a show provided by TrackJS
+            li (hopefully) a very good time indeed
+        
         section(data-auto-animate)
-          code The year was...
-          br
-          code(data-id="TheYear" style="font-size:6dvw") 2014
-          figure.fragment
-            img(src="img/pharrell-williams-happy-1920x1131.jpg")
+
+          .grid.tiny-gap(columns="5")
+            +speakerPic("Sarah Young")
+            +speakerPic("Ash Bzak")
+            +speakerPic("Brandon Minnick")
+            +speakerPic("Jennifer Wadella")
+            +speakerPic("Eli Holderness")
+            +speakerPic("Neciu Dan")
+            +speakerPic("Glenn Henriksen")
+            +speakerPic("Gabby Spurling")
+            +speakerPic("Eldert Grootenboer")
+            +speakerPic("D'arcy Lussier")
+          
+          p Each of our speakers is an #[strong expert] in predicting 
+          div(data-id="TheFuture") the future
+        
         section(data-auto-animate)
-          p #[strong Imagine] being "HAPPY" in 
-          code(data-id="TheYear" style="font-size:18dvw; line-height:75%;") 2020
-        section(data-auto-animate)
-          code(data-id="TheYear" style="font-size:7dvw") 2004
-          figure
-            img(src="img/usher-yeah.jpg")
-      
-        section(data-auto-animate)
-          figure
-            img(src="img/pharrell-crying-1.webp")
+          div(data-id="TheFuture") the future
+          code is undefined
+
+      include sections/_2034.pug
+
+      include sections/_predictions.pug
+
+      include sections/_previews.pug
 
       section
         section(data-background=defaultBG data-auto-animate)
@@ -48,6 +122,10 @@ body
           h3(data-id="RuleNumber") Rule #1
           p(data-id="CodeOfConduct")
             strong Don't be an asshole.
+        section
+          p A note to the audience...
+          p
+            strong Your heckles are not funny.
         section(data-background=defaultBG data-auto-animate)
           h3(data-id="RuleNumber") Rule #2
           p 
@@ -60,8 +138,6 @@ body
           p(style="font-size:3dvw;") Photos, videos, quotes, tweets, snaps, or anything else without the 
           p(data-id="CodeOfConduct" style="font-size:3dvw;")
             strong speaker's express permission.
-
-
 
     include partials/_javascripts.pug 
     

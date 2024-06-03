@@ -1,86 +1,60 @@
-
-mixin introScreen(pic, name, title, talk)
-  if (!talk)
-    - talk = "This talk does not have a title"
-  .talk-preview
-    .inside
-      figure
-        img(src="img/speakers/"+pic)
-      .details
-        .inside-details
-          .name= name
-          .title= title
-          .talk= talk
-
-
-
 section(data-background="img/bg/cyberpunk-2-darker.webp")
   section
     .two-previews
-      +introScreen(
-        "sarah_young.webp",
+      +pubConfTalk(
         "Sarah Young",
         "Mother of Shibes",
         ""
       )
-      +introScreen(
-        "ash_2024.webp",
+      +pubConfTalk(
         "Ash Bzak",
         "UX Rapscallion",
         "According to TNG, it's less than 20 years to World War III"
       )
   section
     .two-previews
-      +introScreen(
-        "brandon_minnick.png",
+      +pubConfTalk(
         "Brandon Minnick",
         "Reads the F@*%ing Comments",
         "Humanity Achieves Peak Laziness"
       )
-      +introScreen(
-        "jenniferwadella.jpg",
+      +pubConfTalk(
         "Jennifer Wadella",
         "Angry Feminist Harpy",
         ""
       )
   section
     .two-previews
-      +introScreen(
-        "eli_holderness.jpg",
+      +pubConfTalk(
         "Eli Holderness",
         "Professional Procrastinator",
         ""
       )
-      +introScreen(
-        "dan_neciu.webp",
+      +pubConfTalk(
         "Neciu Dan",
         "Señor Engineer",
         ""
       )
   section
     .two-previews
-      +introScreen(
-        "glenn_henriksen.jpg",
+      +pubConfTalk(
         "Glenn Henriksen",
         "",
         "The Future is Reduced For Quick Sale"
       )
-      +introScreen(
-        "gabby_fist.webp",
+      +pubConfTalk(
         "Gabby Spurling",
         'Googling "How To Comedy"',
         ""
       )
   section
     .two-previews
-      +introScreen(
-        "eldert.jpg",
+      +pubConfTalk(
         "Eldert Grootenboer",
         "Herder of Cats",
         ""
       )
-      +introScreen(
-        "anonymous.png",
+      +pubConfTalk(
         "D'arcy Lussier",
         "",
         ""

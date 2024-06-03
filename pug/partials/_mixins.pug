@@ -29,3 +29,41 @@ mixin introScreen(slug, start)
       b.white.shadowed
         | (a talk by @AhoyLemon)
     block
+
+mixin speakerPic(who)
+  - let pic = ""
+  if (who === "Sarah Young")
+    - pic = "sarah_young.webp"
+  else if (who === "Ash Bzak")
+    - pic = "ash_2024.webp"
+  else if (who === "Brandon Minnick")
+    - pic = "brandon_minnick.png"
+  else if (who === "Jennifer Wadella")
+    - pic = "jenniferwadella.jpg"
+  else if (who === "Eli Holderness")
+    - pic = "eli_holderness.jpg"
+  else if (who === "Neciu Dan")
+    - pic = "dan_neciu.webp"
+  else if (who === "Glenn Henriksen")
+    - pic = "glenn_henriksen.jpg"
+  else if (who === "Gabby Spurling")
+    - pic = "gabby_fist.webp"
+  else if (who === "Eldert Grootenboer")
+    - pic = "eldert.jpg"
+  else if (who === "D'arcy Lussier")
+    - pic = "anonymous.png"
+  
+  figure
+    img(src="img/speakers/"+pic)
+
+mixin pubConfTalk(name, title, talk)
+  if (!talk)
+    - talk = "This talk does not have a title"
+  .talk-preview
+    .inside
+      +speakerPic(name)
+      .details
+        .inside-details
+          .name= name
+          .title= title
+          .talk= talk
