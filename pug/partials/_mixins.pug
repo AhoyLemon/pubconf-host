@@ -56,7 +56,60 @@ mixin speakerPic(who)
   figure
     img(src="img/speakers/"+pic)
 
-mixin pubConfTalk(name, title, talk)
+mixin pubConfTitle(who)
+  - let title = ""
+  if (who === "Sarah Young")
+    - title = ""
+  else if (who === "Ash Bzak")
+    - title = "According to TNG, it's less than 20 years to World War III"
+  else if (who === "Brandon Minnick")
+    - title = "Humanity Achieves Peak Laziness"
+  else if (who === "Jennifer Wadella")
+    - title = ""
+  else if (who === "Eli Holderness")
+    - title = ""
+  else if (who === "Neciu Dan")
+    - title = ""
+  else if (who === "Glenn Henriksen")
+    - title = "The Future is Reduced For Quick Sale"
+  else if (who === "Gabby Spurling")
+    - title = ""
+  else if (who === "Eldert Grootenboer")
+    - title = "Program Managers Against Humanity"
+  else if (who === "D'arcy Lussier")
+    - title = ""
+  if (!who || !title || title === "")
+    - title = ""
+  .title.talk-title= title
+
+mixin pubConfBio(who)
+  - let bio = ""
+  if (who === "Sarah Young")
+    - bio = "Mother of Shibes"
+  else if (who === "Ash Bzak")
+    - bio = "UX Rapscallion"
+  else if (who === "Brandon Minnick")
+    - bio = "Humanity Achieves Peak Laziness"
+  else if (who === "Jennifer Wadella")
+    - bio = "Angry Feminist Harpy"
+  else if (who === "Eli Holderness")
+    - bio = "Professional Procrastinator"
+  else if (who === "Neciu Dan")
+    - bio = "Señor Engineer"
+  else if (who === "Glenn Henriksen")
+    - bio = ""
+  else if (who === "Gabby Spurling")
+    - bio = "Googling “How To Comedy”"
+  else if (who === "Eldert Grootenboer")
+    - bio = "Herder of Cats"
+  else if (who === "D'arcy Lussier")
+    - bio = ""
+  if (!who || !bio || bio === "")
+    - bio = ""
+  .bio= bio
+
+
+mixin pubConfTalk(name)
   if (!talk)
     - talk = "This talk does not have a title"
   .talk-preview
@@ -65,5 +118,5 @@ mixin pubConfTalk(name, title, talk)
       .details
         .inside-details
           .name= name
-          .title= title
-          .talk= talk
+          +pubConfBio(name)
+          +pubConfTitle(name)

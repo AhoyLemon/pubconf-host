@@ -555,12 +555,12 @@ section .talk-preview .name {
   font-size: 115%;
   color: #FF9318;
 }
-section .talk-preview .title {
+section .talk-preview .bio {
   text-align: left;
   font-size: 75%;
   font-style: italic;
 }
-section .talk-preview .talk {
+section .talk-preview .title {
   text-align: left;
   font-size: 100%;
 }

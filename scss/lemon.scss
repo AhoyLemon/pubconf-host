@@ -189,7 +189,7 @@ section {
     .details { display: flex;  align-items: center; }
     .inside-details { display:grid; gap:20px; }
     .name { text-align: left; font-weight: 725; font-size:115%; color:$orange; }
-    .title { text-align: left; font-size:75%; font-style: italic; }
-    .talk {  text-align: left; font-size:100%; }
+    .bio { text-align: left; font-size:75%; font-style: italic; }
+    .title {  text-align: left; font-size:100%; }
   }
 }
