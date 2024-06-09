@@ -490,8 +490,7 @@
   right: 0;
   width: 50px;
   height: 50px;
-  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   font-size: 1px;
   color: transparent;
 }
@@ -500,17 +499,6 @@
 }
 .previously-lemon .previous-talk .prize.finalist {
   background: #c0c0c0;
-}
-
-.two-previews {
-  display: -ms-grid;
-  display: grid;
-  gap: 40px;
-}
-.two-previews .talk-preview {
-  border: 3px solid #FF9318;
-  padding: 0.25em;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 section .talk-preview figure {
@@ -563,4 +551,37 @@ section .talk-preview .bio {
 section .talk-preview .title {
   text-align: left;
   font-size: 100%;
+}
+
+.two-previews {
+  display: -ms-grid;
+  display: grid;
+  gap: 40px;
+}
+.two-previews .talk-preview {
+  border: 3px solid #FF9318;
+  padding: 0.25em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ten-previews {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.ten-previews .talk-preview {
+  border: 1px solid #FF9318;
+  padding: 0.25em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.ten-previews .talk-preview .inside {
+  font-size: 16px;
+  -ms-grid-columns: 80px 1fr;
+  grid-template-columns: 80px 1fr;
+  height: 100%;
+}
+.ten-previews .talk-preview .inside .inside-details {
+  gap: 8px;
 }
