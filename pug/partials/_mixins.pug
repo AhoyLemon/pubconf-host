@@ -52,6 +52,8 @@ mixin speakerPic(who)
     - pic = "eldert.jpg"
   else if (who === "D'arcy Lussier")
     - pic = "anonymous.png"
+  else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
+    - pic = "fawkes.jpg"
   
   figure
     img(src="img/speakers/"+pic)
@@ -65,7 +67,7 @@ mixin pubConfTitle(who)
   else if (who === "Brandon Minnick")
     - title = "Humanity Achieves Peak Laziness"
   else if (who === "Jennifer Wadella")
-    - title = ""
+    - title = "The Day Millennials Manage the Technical Workforce"
   else if (who === "Eli Holderness")
     - title = ""
   else if (who === "Neciu Dan")
@@ -77,6 +79,8 @@ mixin pubConfTitle(who)
   else if (who === "Eldert Grootenboer")
     - title = "Program Managers Against Humanity"
   else if (who === "D'arcy Lussier")
+    - title = ""
+  else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
     - title = ""
   if (!who || !title || title === "")
     - title = ""
@@ -104,6 +108,8 @@ mixin pubConfBio(who)
     - bio = "Herder of Cats"
   else if (who === "D'arcy Lussier")
     - bio = ""
+  else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
+    - bio = "a former PubConf champion!"
   if (!who || !bio || bio === "")
     - bio = ""
   .bio= bio
