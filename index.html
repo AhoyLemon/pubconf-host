@@ -43,6 +43,22 @@
   <meta property="og:image" content="/img/og-image.png">
 </head>
 <body> 
+  <!--// THE ORDER
+  1. BEFORE SLIDES (autoplay, maybe a different deck)
+  
+  
+  // THEN
+  1. Hi, I'm Lemon
+  2. I'm not Todd.
+  3. I've won this a bunch of times before.
+  4. Now I'm the host, and these are the speakers
+  5. Each of them is an expert in their field.
+  6. Each of them knows abut the Future
+  7. Each of them will tell you about 2034
+  8. And you might think 2034 won't look that different.
+  
+  
+  -->
   <div class="reveal">
     <div class="slides">
       <section>
@@ -220,7 +236,7 @@
               </div>
               <div class="talk-preview">
                 <div class="inside">
-                    <figure><img src="img/speakers/anonymous.png"></figure>
+                    <figure><img src="img/speakers/darcy1.jpg"></figure>
                   <div class="details">
                     <div class="inside-details">
                       <div class="name">D'arcy Lussier</div>
@@ -249,7 +265,7 @@
                     <div class="inside-details">
                       <div class="name">Sarah Young</div>
                         <div class="bio">Mother of Shibes</div>
-                        <div class="title talk-title"></div>
+                        <div class="title talk-title">The Roast of TechBro-ism</div>
                     </div>
                   </div>
                 </div>
@@ -261,7 +277,7 @@
                     <div class="inside-details">
                       <div class="name">Neciu Dan</div>
                         <div class="bio">Señor Engineer</div>
-                        <div class="title talk-title"></div>
+                        <div class="title talk-title"> Software Engineering Teams in the year 2035</div>
                     </div>
                   </div>
                 </div>
@@ -303,7 +319,19 @@
                     <div class="inside-details">
                       <div class="name">Sarah Young</div>
                         <div class="bio">Mother of Shibes</div>
-                        <div class="title talk-title"></div>
+                        <div class="title talk-title">The Roast of TechBro-ism</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="talk-preview">
+                <div class="inside">
+                    <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
+                  <div class="details">
+                    <div class="inside-details">
+                      <div class="name">Glenn Henriksen</div>
+                        <div class="bio"></div>
+                        <div class="title talk-title">The Future is Reduced For Quick Sale</div>
                     </div>
                   </div>
                 </div>
@@ -359,7 +387,7 @@
                     <div class="inside-details">
                       <div class="name">Neciu Dan</div>
                         <div class="bio">Señor Engineer</div>
-                        <div class="title talk-title"></div>
+                        <div class="title talk-title"> Software Engineering Teams in the year 2035</div>
                     </div>
                   </div>
                 </div>
@@ -370,12 +398,12 @@
           <div class="two-previews">
               <div class="talk-preview">
                 <div class="inside">
-                    <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
+                    <figure><img src="img/speakers/fawkes.jpg"></figure>
                   <div class="details">
                     <div class="inside-details">
-                      <div class="name">Glenn Henriksen</div>
-                        <div class="bio"></div>
-                        <div class="title talk-title">The Future is Reduced For Quick Sale</div>
+                      <div class="name">A Surprise Guest</div>
+                        <div class="bio">a former PubConf champion!</div>
+                        <div class="title talk-title"></div>
                     </div>
                   </div>
                 </div>
@@ -410,7 +438,7 @@
               </div>
               <div class="talk-preview">
                 <div class="inside">
-                    <figure><img src="img/speakers/anonymous.png"></figure>
+                    <figure><img src="img/speakers/darcy1.jpg"></figure>
                   <div class="details">
                     <div class="inside-details">
                       <div class="name">D'arcy Lussier</div>
@@ -423,6 +451,8 @@
           </div>
         </section>
       </section>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- BEGIN THE PRE_SHOW.........-->
       <section>
         <section data-background="img/bg/robots-1.webp" data-auto-animate>
           <h2>Let's get this</h2><img class="logo" src="svg/event-logo-2.svg">
@@ -491,11 +521,25 @@
             </div>
           </div>
         </section>
-        <section>
+        <section data-auto-animate>
           <p>Now I'm the host.</p>
           <div class="fragment">
             <p>And these are the speakers...</p>
-            <div class="grid tiny-gap" columns="5">
+              <div class="grid tiny-gap" columns="5" data-id="SpeakerGrid">
+                  <figure><img src="img/speakers/sarah_young.webp"></figure>
+                  <figure><img src="img/speakers/brandon_minnick.png"></figure>
+                  <figure><img src="img/speakers/jenniferwadella.jpg"></figure>
+                  <figure><img src="img/speakers/eli_holderness.jpg"></figure>
+                  <figure><img src="img/speakers/dan_neciu.webp"></figure>
+                  <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
+                  <figure><img src="img/speakers/gabby_fist.webp"></figure>
+                  <figure><img src="img/speakers/eldert.jpg"></figure>
+                  <figure><img src="img/speakers/darcy1.jpg"></figure>
+              </div>
+          </div>
+        </section>
+        <section data-auto-animate>
+            <div class="grid tiny-gap" columns="5" data-id="SpeakerGrid">
                 <figure><img src="img/speakers/sarah_young.webp"></figure>
                 <figure><img src="img/speakers/brandon_minnick.png"></figure>
                 <figure><img src="img/speakers/jenniferwadella.jpg"></figure>
@@ -504,55 +548,27 @@
                 <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
                 <figure><img src="img/speakers/gabby_fist.webp"></figure>
                 <figure><img src="img/speakers/eldert.jpg"></figure>
-                <figure><img src="img/speakers/anonymous.png"></figure>
+                <figure><img src="img/speakers/darcy1.jpg"></figure>
             </div>
-          </div>
+          <p>Each is an expert in
+            <div>their field</div>
+          </p>
         </section>
         <section data-auto-animate>
-          <p data-id="Have" style="text-shadow:1px 1px 1px black, -1px -1px 1px black;"><strong>They will have...</strong></p>
-          <ul>
-            <li>5 minutes</li>
-            <li>20 slides</li>
-            <li>15 seconds per slide</li>
-            <div class="fragment">
-              <li data-id="PANIC">eyes filled with panic</li>
-              <li>a heart filled with regret</li>
+            <div class="grid tiny-gap" columns="5" data-id="SpeakerGrid">
+                <figure><img src="img/speakers/sarah_young.webp"></figure>
+                <figure><img src="img/speakers/brandon_minnick.png"></figure>
+                <figure><img src="img/speakers/jenniferwadella.jpg"></figure>
+                <figure><img src="img/speakers/eli_holderness.jpg"></figure>
+                <figure><img src="img/speakers/dan_neciu.webp"></figure>
+                <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
+                <figure><img src="img/speakers/gabby_fist.webp"></figure>
+                <figure><img src="img/speakers/eldert.jpg"></figure>
+                <figure><img src="img/speakers/darcy1.jpg"></figure>
             </div>
-          </ul>
-        </section>
-        <section data-auto-animate data-background-video="video/856227-hd_1920_960_24fps.mp4" data-background-video-loop></section>
-        <section data-auto-animate>
-          <p data-id="Have"><strong>You will have...</strong> </p>
-          <ul>
-            <li>drinks provided by KCDC</li>
-            <li>swag provided by Savas Labs</li>
-            <li>a show provided by TrackJS</li>
-            <li>(hopefully) a very good time indeed</li>
-          </ul>
-        </section>
-        <section data-auto-animate>
-          <div class="grid tiny-gap" columns="5">
-              <figure><img src="img/speakers/sarah_young.webp"></figure>
-              <figure><img src="img/speakers/brandon_minnick.png"></figure>
-              <figure><img src="img/speakers/jenniferwadella.jpg"></figure>
-              <figure><img src="img/speakers/eli_holderness.jpg"></figure>
-              <figure><img src="img/speakers/dan_neciu.webp"></figure>
-              <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
-              <figure><img src="img/speakers/gabby_fist.webp"></figure>
-              <figure><img src="img/speakers/eldert.jpg"></figure>
-              <figure><img src="img/speakers/anonymous.png"></figure>
-          </div>
-          <p>Each of our speakers is an <strong>expert</strong> in predicting </p>
-          <div data-id="TheFuture">the future</div>
-        </section>
-        <section data-auto-animate>
-          <div data-id="TheFuture">the future</div><code>is undefined</code>
-        </section>
-      </section>
-      <section>
-        <section data-background-color="#ff2222">
-          <p>It's time for...</p>
-          <h1>THE SPONSORED TALK</h1>
+          <p>Each is an expert in
+            <div>the future</div>
+          </p>
         </section>
       </section>
       <section>
@@ -564,9 +580,14 @@
         <section data-auto-animate>
           <p><strong>Imagine</strong> being "HAPPY" in </p><code data-id="TheYear" style="font-size:18dvw; line-height:75%;">2020</code>
         </section>
-        <section data-auto-animate>
-          <figure><img src="img/pharrell-crying-1.webp"></figure>
+      </section>
+      <section> 
+        <section data-auto-animate><code data-id="TheYear" style="font-size:8dvw; line-height:80%">2014</code><br><code>...was a long time ago.</code></section>
+        <section data-auto-animate><br><code data-id="TheYear" style="font-size:8dvw; line-height:80%">2014</code><br><code>I looked like this...</code>
+          <figure><img src="img/lemon_in_2014.jpg"></figure>
         </section>
+        <section data-auto-animate><code data-id="TheYear" style="font-size:8dvw; line-height:80%">2014</code><br><code>I made this video to myself...</code></section>
+        <section data-background-video="video/lemon-in-2014.mp4"></section>
       </section>
       <section>
         <section>
@@ -660,6 +681,54 @@
           </blockquote>
         </section>
       </section>
+      <!-- THE RULES-->
+      <section>
+        <section data-auto-animate>
+          <h3> <span data-id="ThosePredictions">Those predictions were </span><span data-id="Were">wrong.</span></h3>
+        </section>
+        <section data-auto-animate>
+          <h3> <span data-id="ThosePredictions">Those predictions will be </span><span data-id="Were">right.</span></h3>
+        </section>
+        <section data-auto-animate>
+          <h3> <span data-id="ThosePredictions">Those predictions will be </span><span data-id="Were" style="text-decoration: line-through; color:red;">right.</span></h3>
+          <h3><span style="padding-left:21ch;"> ^funny</span></h3>
+        </section>
+        <section> 
+            <div class="grid tiny-gap" columns="5" data-id="SpeakerGrid">
+                <figure><img src="img/speakers/sarah_young.webp"></figure>
+                <figure><img src="img/speakers/brandon_minnick.png"></figure>
+                <figure><img src="img/speakers/jenniferwadella.jpg"></figure>
+                <figure><img src="img/speakers/eli_holderness.jpg"></figure>
+                <figure><img src="img/speakers/dan_neciu.webp"></figure>
+                <figure><img src="img/speakers/glenn_henriksen.jpg"></figure>
+                <figure><img src="img/speakers/gabby_fist.webp"></figure>
+                <figure><img src="img/speakers/eldert.jpg"></figure>
+                <figure><img src="img/speakers/darcy1.jpg"></figure>
+            </div>
+        </section>
+        <section data-auto-animate>
+          <p data-id="Have" style="text-shadow:1px 1px 1px black, -1px -1px 1px black;"><strong>They will have...</strong></p>
+          <ul>
+            <li>5 minutes</li>
+            <li>20 slides</li>
+            <li>15 seconds per slide</li>
+            <div class="fragment">
+              <li data-id="PANIC">eyes filled with panic</li>
+              <li>a heart filled with regret</li>
+            </div>
+          </ul>
+        </section>
+        <section data-auto-animate data-background-video="video/856227-hd_1920_960_24fps.mp4" data-background-video-loop></section>
+        <section data-auto-animate>
+          <p data-id="Have"><strong>You will have...</strong> </p>
+          <ul>
+            <li>drinks provided by KCDC</li>
+            <li>swag provided by Savas Labs</li>
+            <li>a show provided by TrackJS</li>
+            <li>(hopefully) a very good time indeed  </li>
+          </ul>
+        </section>
+      </section>
       <section>
         <section data-background="img/bg/robots-1.webp" data-auto-animate><img class="logo" src="svg/event-logo-2.svg">
           <p data-id="CodeOfConduct"><strong>Code of Conduct</strong></p>
@@ -668,10 +737,7 @@
           <h3 data-id="RuleNumber">Rule #1</h3>
           <p data-id="CodeOfConduct"><strong>Don't be an asshole.</strong></p>
         </section>
-        <section>
-          <p>A note to the audience...</p>
-          <p><strong>Your heckles are not funny.</strong></p>
-        </section>
+        <section data-background="img/clippy-1.jpg"></section>
         <section data-background="img/bg/robots-1.webp" data-auto-animate>
           <h3 data-id="RuleNumber">Rule #2</h3>
           <p> <strong>What happens at</strong></p><img class="logo" src="svg/event-logo-2.svg">
@@ -681,6 +747,42 @@
           <h3 data-id="RuleNumber">Please no...</h3>
           <p style="font-size:3dvw;">Photos, videos, quotes, tweets, snaps, or anything else without the </p>
           <p data-id="CodeOfConduct" style="font-size:3dvw;"><strong>speaker's express permission.</strong></p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h4>THE AGENDA</h4>
+          <dl style="width:100%; ">
+            <dt>NOW...</dt>
+            <dd>me showing you this slide.</dd>
+            <div class="fragment">
+              <dt>THEN...</dt>
+              <dd>5 minute looks into the year <code>2034</code></dd>
+            </div>
+            <div class="fragment">
+              <dt>THEN...</dt>
+              <dd>you will vote for your two favorite talks</dd>
+            </div>
+            <div class="fragment">
+              <dt>THEN...</dt>
+              <dd>the two favorites will face off in a <strong>head to head</strong> match to crown a winner</dd>
+            </div>
+            <div class="fragment">
+              <dt>THEN...</dt>
+              <dd>you'll go back to your hotel room.</dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+      <!-- SEGUE TO SPEAKERS-->
+      <section>
+        <section data-auto-animate>
+          <div>And now, it's time for</div>
+          <div data-id="TheFuture"><code style="font-size:6ch">the future</code></div>
+        </section>
+        <section data-auto-animate>
+          <div> <strong>ERROR:</strong></div><br>
+          <div data-id="TheFuture"><code style="font-size:6ch; color:#ff2222">the future</code></div><br><code data-id="TheFutureOtherText" style="font-size:6ch; line-height:50%; color:#ff2222">is undefined</code>
         </section>
       </section>
     </div>

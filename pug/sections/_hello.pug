@@ -1,27 +1,52 @@
-section(data-transition="convex" data-transition-speed="6000")
+section
+  section(data-background=defaultBG data-auto-animate)
+    h2 Let's get this
+    img.logo(src=logo)
+    h2 started!
+  
   section
     h1 Hi!
-    h2.fragment My name is Lemon.
-    p.fragment (I make websites.)
-    aside.notes
-      h2 I've been making websites for about 20 years. I make websites for money and I make websites for fun. I love the platform and I think it's a really great opportunity to make fun stuff.
-  
-  section(data-background="img/bg/savas-cyan-1.png")
-    h4(style="color:#221c35; text-shadow:none;") I work at
-    .fragment(style="padding-bottom:7vh;")
-      img(src="svg/savas-logo-black.svg" alt="Savas Labs" style="max-height:22vh;")
+    h2 My name is Lemon.
+    p (I'm not Todd.)
 
-  section(data-background="img/bg/savas-cyan-2.png" data-background-transition="none")
-    div(style="color:#221c35; padding-bottom:9vh;")
-      h2(style="text-shadow:none; color:#221c35;") Front End Lead
-      .fragment
-        ul
-          li Mentoring
-          li Shepherding
-          li Documenting
-  section(data-transition="fade" data-background="img/bg/savas-cyan-2.png")
-    .over-photo
-      code I am a serious professional.
-  section(data-transition="none" data-background-image="img/gif/shooty-frooty.gif" data-background-size="contain")
-    .over-photo
-      code I am a serious professional.
+  section
+    mixin previously(location, year, title, prize)
+      .previous-talk(class=prize)
+        .location-and-year
+          span.location= location
+          span.year= year
+        .title= title
+        if (prize === "winner")
+          .prize.winner winner
+        if (prize === "finalist")
+          .prize.finalist finalist
+    p I've done this a couple times before...
+    .fragment
+      .previously-lemon(columns="3")
+        +previously("London", 2024, "ChatGPT is a Conspiracy of the Illuminati")
+        +previously("Minneapolis", 2022, "Bullshit Champion Round", "winner")
+        +previously("Kansas City", 2022, "Burning Production")
+        +previously("London", 2020, "Website Needs Code, Badly!")
+        +previously("Amsterdam", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding")
+        +previously("Kansas City", 2019, "Oops! I Made A Simpsons Porno?!", "finalist")
+        +previously("Minnesota", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding", "winner")
+        +previously("Sydney", 2018, "Please Your VP By Hating Your User", "finalist")
+        +previously("Kansas City", 2018, "Please Your VP By Hating Your User", "winner")
+        +previously("Minnesota", 2018, "Please Your VP By Hating Your User", "winner")
+        +previously("Minnesota", 2017, "I Got Popular (Ooops)", "finalist")
+    
+  section(data-auto-animate)
+    p Now I'm the host.
+    .fragment
+      p And these are the speakers...
+      +showSpeakerGrid()
+  
+  section(data-auto-animate)
+    +showSpeakerGrid()
+    p Each is an expert in
+      div their field
+  
+  section(data-auto-animate)
+    +showSpeakerGrid()
+    p Each is an expert in
+      div the future

@@ -6,68 +6,59 @@ head
 body  
   include partials/_mixins.pug
 
+
+  //// THE ORDER
+    1. BEFORE SLIDES (autoplay, maybe a different deck)
+
+
+    // THEN
+    1. Hi, I'm Lemon
+    2. I'm not Todd.
+    3. I've won this a bunch of times before.
+    4. Now I'm the host, and these are the speakers
+    5. Each of them is an expert in their field.
+    6. Each of them knows abut the Future
+    7. Each of them will tell you about 2034
+    8. And you might think 2034 won't look that different.
+
+
   .reveal
     .slides
-      include sections/_before.pug
 
+      include sections/_before.pug
       include sections/_lineup.pug
       include sections/_previews.pug
 
+
+      /////////////////////////////////////////////////////////////
+      // BEGIN THE PRE_SHOW.........
+      include sections/_hello.pug
+      include sections/_2034.pug
+      include sections/_video_from_2014.pug
+      include sections/_predictions.pug
+
+      // THE RULES
       section
-        section(data-background=defaultBG data-auto-animate)
-          h2 Let's get this
-          img.logo(src=logo)
-          h2 started!
+
+        section(data-auto-animate)
+          h3 
+            span(data-id="ThosePredictions") Those predictions were 
+            span(data-id="Were") wrong.
         
-        section
-          h1 Hi!
-          h2 My name is Lemon.
-          p (I'm not Todd.)
-
-        section
-
-          mixin previously(location, year, title, prize)
-            .previous-talk(class=prize)
-              .location-and-year
-                span.location= location
-                span.year= year
-              .title= title
-              if (prize === "winner")
-                .prize.winner winner
-              if (prize === "finalist")
-                .prize.finalist finalist
-
-          p I've done this a couple times before...
-          .fragment
-            .previously-lemon(columns="3")
-              +previously("London", 2024, "ChatGPT is a Conspiracy of the Illuminati")
-              +previously("Minneapolis", 2022, "Bullshit Champion Round", "winner")
-              +previously("Kansas City", 2022, "Burning Production")
-              +previously("London", 2020, "Website Needs Code, Badly!")
-              +previously("Amsterdam", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding")
-              +previously("Kansas City", 2019, "Oops! I Made A Simpsons Porno?!", "finalist")
-              +previously("Minnesota", 2019, "ACME Bears No Responsibility For Mr. Coyote Exploding", "winner")
-              +previously("Sydney", 2018, "Please Your VP By Hating Your User", "finalist")
-              +previously("Kansas City", 2018, "Please Your VP By Hating Your User", "winner")
-              +previously("Minnesota", 2018, "Please Your VP By Hating Your User", "winner")
-              +previously("Minnesota", 2017, "I Got Popular (Ooops)", "finalist")
-          
-        section
-          p Now I'm the host.
-          .fragment
-            p And these are the speakers...
-
-            .grid.tiny-gap(columns="5")
-              +speakerPic("Sarah Young")
-              //-+speakerPic("Ash Bzak")
-              +speakerPic("Brandon Minnick")
-              +speakerPic("Jennifer Wadella")
-              +speakerPic("Eli Holderness")
-              +speakerPic("Neciu Dan")
-              +speakerPic("Glenn Henriksen")
-              +speakerPic("Gabby Spurling")
-              +speakerPic("Eldert Grootenboer")
-              +speakerPic("D'arcy Lussier")
+        section(data-auto-animate)
+          h3 
+            span(data-id="ThosePredictions") Those predictions will be 
+            span(data-id="Were") right.
+        
+        section(data-auto-animate)
+          h3 
+            span(data-id="ThosePredictions") Those predictions will be 
+            span(data-id="Were" style="text-decoration: line-through; color:red;") right.
+          h3
+            span(style="padding-left:21ch;")  ^funny
+        
+        section 
+          +showSpeakerGrid()
         
         section(data-auto-animate)
           p(data-id="Have" style="text-shadow:1px 1px 1px black, -1px -1px 1px black;") #[strong They will have...]
@@ -87,65 +78,42 @@ body
             li drinks provided by KCDC
             li swag provided by Savas Labs
             li a show provided by TrackJS
-            li (hopefully) a very good time indeed
-        
-
-
-        section(data-auto-animate)
-
-          .grid.tiny-gap(columns="5")
-            +speakerPic("Sarah Young")
-            //-+speakerPic("Ash Bzak")
-            +speakerPic("Brandon Minnick")
-            +speakerPic("Jennifer Wadella")
-            +speakerPic("Eli Holderness")
-            +speakerPic("Neciu Dan")
-            +speakerPic("Glenn Henriksen")
-            +speakerPic("Gabby Spurling")
-            +speakerPic("Eldert Grootenboer")
-            +speakerPic("D'arcy Lussier")
-          
-          p Each of our speakers is an #[strong expert] in predicting 
-          div(data-id="TheFuture") the future
-        
-        section(data-auto-animate)
-          div(data-id="TheFuture") the future
-          code is undefined
-
+            li (hopefully) a very good time indeed  
+      include sections/_code-of-conduct.pug
       section
-        section(data-background-color="#ff2222")
-          p It's time for...
-          h1 THE SPONSORED TALK
-
-      include sections/_2034.pug
-
-      include sections/_predictions.pug
-
-      section
-        section(data-background=defaultBG data-auto-animate)
-          img.logo(src=logo)
-          p(data-id="CodeOfConduct")
-            strong Code of Conduct
-        section(data-background="img/trump-orb.jpg" data-background-position="top right" data-auto-animate)
-          h3(data-id="RuleNumber") Rule #1
-          p(data-id="CodeOfConduct")
-            strong Don't be an asshole.
         section
-          p A note to the audience...
-          p
-            strong Your heckles are not funny.
-        section(data-background=defaultBG data-auto-animate)
-          h3(data-id="RuleNumber") Rule #2
-          p 
-            strong What happens at
-          img.logo(src=logo)
-          p(data-id="CodeOfConduct")
-            strong ...stays at PubConf!
-        section(data-background=defaultBG data-auto-animate)
-          h3(data-id="RuleNumber") Please no...
-          p(style="font-size:3dvw;") Photos, videos, quotes, tweets, snaps, or anything else without the 
-          p(data-id="CodeOfConduct" style="font-size:3dvw;")
-            strong speaker's express permission.
+          h4 THE AGENDA
+          dl(style="width:100%; ")
+            dt NOW...
+            dd me showing you this slide.
+            .fragment
+              dt THEN...
+              dd 5 minute looks into the year #[code 2034]
+            .fragment
+              dt THEN...
+              dd you will vote for your two favorite talks
+            .fragment
+              dt THEN...
+              dd the two favorites will face off in a #[strong head to head] match to crown a winner
+            .fragment
+              dt THEN...
+              dd you'll go back to your hotel room.
+      // SEGUE TO SPEAKERS
+      section
+        section(data-auto-animate)
+
+          div And now, it's time for
+          div(data-id="TheFuture")
+            code(style="font-size:6ch") the future
+
+        section(data-auto-animate)
+          div 
+            strong ERROR:
+          br
+          div(data-id="TheFuture")
+            code(style="font-size:6ch; color:#ff2222") the future
+          br
+          code(data-id="TheFutureOtherText" style="font-size:6ch; line-height:50%; color:#ff2222") is undefined
 
     include partials/_javascripts.pug 
     

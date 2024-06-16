@@ -51,7 +51,7 @@ mixin speakerPic(who)
   else if (who === "Eldert Grootenboer")
     - pic = "eldert.jpg"
   else if (who === "D'arcy Lussier")
-    - pic = "anonymous.png"
+    - pic = "darcy1.jpg"
   else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
     - pic = "fawkes.jpg"
   
@@ -61,7 +61,7 @@ mixin speakerPic(who)
 mixin pubConfTitle(who)
   - let title = ""
   if (who === "Sarah Young")
-    - title = ""
+    - title = "The Roast of TechBro-ism"
   else if (who === "Ash Bzak")
     - title = "According to TNG, it's less than 20 years to World War III"
   else if (who === "Brandon Minnick")
@@ -71,7 +71,7 @@ mixin pubConfTitle(who)
   else if (who === "Eli Holderness")
     - title = ""
   else if (who === "Neciu Dan")
-    - title = ""
+    - title = " Software Engineering Teams in the year 2035"
   else if (who === "Glenn Henriksen")
     - title = "The Future is Reduced For Quick Sale"
   else if (who === "Gabby Spurling")
@@ -126,3 +126,15 @@ mixin pubConfTalk(name)
           .name= name
           +pubConfBio(name)
           +pubConfTitle(name)
+
+mixin showSpeakerGrid()
+  .grid.tiny-gap(columns="5" data-id="SpeakerGrid")
+    +speakerPic("Sarah Young")
+    +speakerPic("Brandon Minnick")
+    +speakerPic("Jennifer Wadella")
+    +speakerPic("Eli Holderness")
+    +speakerPic("Neciu Dan")
+    +speakerPic("Glenn Henriksen")
+    +speakerPic("Gabby Spurling")
+    +speakerPic("Eldert Grootenboer")
+    +speakerPic("D'arcy Lussier")
