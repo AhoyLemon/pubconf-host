@@ -583,5 +583,8 @@ section .talk-preview .title {
   height: 100%;
 }
 .ten-previews .talk-preview .inside .inside-details {
-  gap: 8px;
+  gap: 2px;
+}
+.ten-previews .talk-preview .inside .talk-title {
+  padding-top: 10px;
 }

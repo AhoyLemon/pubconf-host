@@ -193,7 +193,8 @@ section {
 .ten-previews { display: grid; grid-template-columns: repeat(2,1fr); gap:10px;
   .talk-preview { border: 1px solid $orange; padding:0.25em; background-color: rgba(0,0,0,0.5);
     .inside { font-size:16px; grid-template-columns: 80px 1fr; height: 100%;
-      .inside-details { gap:8px; }
+      .inside-details { gap:2px; }
+      .talk-title { padding-top: 10px;}
     }
   }
 }
