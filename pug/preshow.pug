@@ -1,0 +1,15 @@
+include partials/_variables.pug
+
+doctype html
+head
+  include partials/_head.pug
+body  
+  include partials/_mixins.pug
+
+  .reveal
+    .slides
+      include sections/_before.pug
+
+  .javascripts
+    include partials/_javascripts.pug
+    script(src="js/reveal-config-autoplay.js")

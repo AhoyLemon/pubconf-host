@@ -14,7 +14,7 @@ Reveal.initialize({
   controlsBackArrows: "faded",
 
   // Display a presentation progress bar
-  progress: true,
+  progress: false,
 
   // Display the page number of the current slide
   // - true:    Show slide number
@@ -30,7 +30,7 @@ Reveal.initialize({
   // number for the current slide. The function should take in a slide
   // object and return an array with one string [slideNumber] or
   // three strings [n1,delimiter,n2]. See #formatSlideNumber().
-  slideNumber: true,
+  slideNumber: false,
 
   // Can be used to limit the contexts in which the slide number appears
   // - "all":      Always show the slide number
@@ -44,16 +44,16 @@ Reveal.initialize({
 
   // Add the current slide number to the URL hash so that reloading the
   // page/copying the URL will return you to the same slide
-  hash: true,
+  hash: false,
 
   // Flags if we should monitor the hash and change slides accordingly
-  respondToHashChanges: true,
+  respondToHashChanges: false,
 
   // Enable support for jump-to-slide navigation shortcuts
-  jumpToSlide: true,
+  jumpToSlide: false,
 
   // Push each slide change to the browser history.  Implies `hash: true`
-  history: true,
+  history: false,
 
   // Enable keyboard shortcuts for navigation
   keyboard: true,
@@ -69,7 +69,7 @@ Reveal.initialize({
   disableLayout: false,
 
   // Enable the slide overview mode
-  overview: true,
+  overview: false,
 
   // Vertical centering of slides
   center: true,
@@ -78,7 +78,7 @@ Reveal.initialize({
   touch: false,
 
   // Loop the presentation
-  loop: false,
+  loop: true,
 
   // Change the presentation direction to be RTL
   rtl: false,
@@ -110,14 +110,14 @@ Reveal.initialize({
   navigationMode: "default",
 
   // Randomizes the order of slides each time the presentation loads
-  shuffle: false,
+  shuffle: true,
 
   // Turns fragments on and off globally
   fragments: true,
 
   // Flags whether to include the current fragment in the URL,
   // so that reloading brings you to the same fragment position
-  fragmentInURL: true,
+  fragmentInURL: false,
 
   // Flags if the presentation is running in an embedded mode,
   // i.e. contained within a limited portion of the screen
@@ -182,7 +182,7 @@ Reveal.initialize({
   //           is present on the current slide or fragment
   // - 1+:     All slides will progress automatically at the given interval
   // - false:  No auto-sliding, even if data-autoslide is present
-  autoSlide: 0,
+  autoSlide: 15000,
 
   // Stop auto-sliding after user input
   autoSlideStoppable: true,
