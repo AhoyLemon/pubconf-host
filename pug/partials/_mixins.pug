@@ -15,7 +15,6 @@ mixin image(file)
       figcaption
         block
 
-
 mixin videoBG(slug,start)
   if !start
     - start = 0
@@ -52,8 +51,12 @@ mixin speakerPic(who)
     - pic = "eldert.jpg"
   else if (who === "D'arcy Lussier")
     - pic = "darcy1.jpg"
+  else if (who === "Jennie Ocken")
+    - pic = "ocken-1.jpg"
   else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
     - pic = "mystery.jpg"
+  else
+    - pic = "anonymous.png"
   
   figure
     img(src="img/speakers/"+pic)
@@ -69,7 +72,7 @@ mixin pubConfTitle(who)
   else if (who === "Jennifer Wadella")
     - title = "The Day Millennials Manage the Technical Workforce"
   else if (who === "Eli Holderness")
-    - title = ""
+    - title = "The Future? You're Looking At It Baby."
   else if (who === "Neciu Dan")
     - title = " Software Engineering Teams in the year 2035"
   else if (who === "Glenn Henriksen")
@@ -82,7 +85,9 @@ mixin pubConfTitle(who)
     - title = ""
   else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
     - title = ""
-  if (!who || !title || title === "")
+  else if (who === "Jennie Ocken")
+    - title = "CoDS-I 2035 Annual Report"
+  else
     - title = ""
   .title.talk-title= title
 
@@ -108,6 +113,8 @@ mixin pubConfBio(who)
     - bio = "Herder of Cats"
   else if (who === "D'arcy Lussier")
     - bio = ""
+  else if (who === "Jennie Ocken")
+    - bio = "Coming In Cluch!"
   else if (who === "Jon Mills" || who === "Surprise Guest" || who === "A Surprise Guest")
     - bio = "a former PubConf champion!"
   if (!who || !bio || bio === "")
@@ -133,8 +140,10 @@ mixin showSpeakerGrid()
     +speakerPic("Brandon Minnick")
     +speakerPic("Jennifer Wadella")
     +speakerPic("Eli Holderness")
-    +speakerPic("Neciu Dan")
+    //+speakerPic("Neciu Dan")
     +speakerPic("Glenn Henriksen")
     +speakerPic("Gabby Spurling")
     +speakerPic("Eldert Grootenboer")
     +speakerPic("D'arcy Lussier")
+    +speakerPic("Jennie Ocken")
+    +speakerPic("Surprise Guest")
