@@ -25,6 +25,7 @@ body
     .slides
     
       include sections/_lineup.pug
+      include sections/_screenshot-these.pug
 
       /////////////////////////////////////////////////////////////
       // BEGIN THE PRE_SHOW.........
@@ -56,6 +57,9 @@ body
         
         section 
           +showSpeakerGrid()
+
+        section
+          p #[strong Ignite Decks] about the year 2034.
         
         section(data-auto-animate)
           p(data-id="Have" style="text-shadow:1px 1px 1px black, -1px -1px 1px black;") #[strong They will have...]
@@ -72,7 +76,7 @@ body
         section(data-auto-animate)
           p(data-id="Have") #[strong You will have...] 
           ul
-            li drinks provided by KCDC
+            li drinks & nosh provided by #[strong KCDC]
             li swag provided by Savas Labs
             li a show provided by TrackJS
             li (hopefully) a very good time indeed  
@@ -111,6 +115,17 @@ body
             code(style="font-size:6ch; color:#ff2222") the future
           br
           code(data-id="TheFutureOtherText" style="font-size:6ch; line-height:50%; color:#ff2222") is undefined
+
+      section
+        section
+          p And now to make it even more stressful...
+          
+          h4.blink Let's judge these people publicly!
+
+        section
+          p Go to...
+          img(src="img/motherfucking-best.svg")
+          p and vote for your #[strong two] favorites!
 
     include partials/_javascripts.pug 
     
