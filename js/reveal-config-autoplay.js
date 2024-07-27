@@ -182,7 +182,7 @@ Reveal.initialize({
   //           is present on the current slide or fragment
   // - 1+:     All slides will progress automatically at the given interval
   // - false:  No auto-sliding, even if data-autoslide is present
-  autoSlide: 15000,
+  autoSlide: 30000,
 
   // Stop auto-sliding after user input
   autoSlideStoppable: true,
